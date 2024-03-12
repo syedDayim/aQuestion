@@ -1,0 +1,16 @@
+.createElement()
+.innerText // add data
+.append() or .prepend() // adds at the end or at the start respectively.
+.remove() // removes an element
+.before() // adds element before an element
+.after() // adds element after an element
+
+.cloneNode(true) // clones a node
+
+
+event Listners
+
+1. click
+2. keypress
+3. mouseover
+4. mouseleave
