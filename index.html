@@ -1,81 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Move Effect</title>
-  <style>
-    /* Style for the buttons */
-    body{
-        background-color: rgb(73, 84, 168);
-        caret-color: blue; /* Change text cursor color */
-        }
-    .btn {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 5px;
-      position: absolute;
-    }
-
-    /* Style for the "Yes" button */
-    #yes-btn {
-      background-color: green;
-      color: white;
-      left: 10%;
-    }
-
-    /* Style for the "No" button */
-    .no-btn {
-      background-color: red;
-      color: white;
-    }
-    .container {
-
-        /* height: 100vh; */
-        width: 100vw;
-        display: flex;
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="script.js" defer></script> -->
 </head>
+
 <body>
-
-  <!-- HTML buttons with IDs for styling and JavaScript interaction -->
-  <h1>Do you want your Slippers Back?</h1>
-  <div class="container">
-      <button id="yes-btn" class="btn" onmouseover="moveButton('yes-btn')">Yes</button>
-      <button id="no-btn" class="btn no-btn" onclick="displayResult()">No</button>
-  </div>
-
-  <h1 style="margin-top: 90px;" class="result"></h1>
-
-  <script>
-    // JavaScript function to move the "Yes" button to a random location when hovered
-    const btn = document.querySelector('.btn');
-    const h1 = document.querySelector('.result');
-    btn.addEventListener('click', function(e){
-        h1.textContent = "OK";
-        h1.style = `
-            margin-top: 10px;
-        `;
-    });
-
-    function displayResult() {
-      h1.textContent = "OK";
-    }
-
-    function moveButton(buttonId) {
-      var button = document.getElementById(buttonId);
-      var maxWidth = window.innerWidth - button.clientWidth;
-      var maxHeight = window.innerHeight - button.clientHeight;
-
-      var newX = Math.floor(Math.random() * maxWidth);
-      var newY = Math.floor(Math.random() * maxHeight);
-
-      button.style.left = newX + 'px';
-      button.style.top = newY + 'px';
-    }
-  </script>
 </body>
+
 </html>
